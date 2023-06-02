@@ -1,17 +1,12 @@
 #https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem?isFullScreen=true
 
-n = 3 #int(input("Ingrese numero: "))
-arr = list(map(int, input("Ingrese Numeros: ").split(" ")))
-
-# def subc():
-#     for i in (n+1):
-#         arr.append(arr)
+n = int(input("Ingrese Cantidad Puntajes: "))
+arr = list(map(int, input("Ingrese Puntajes separados por 1 espacio: ").split(" ")))
 
 
+subc = []
+for i in arr:
+    if i != max(arr):
+        subc.append(i)
 
-# subc = []
-# for i in arr:
-#     if i != max(arr):
-#         subc.append(i)
-
-# print(int(max(subc)))
+print(int(max(subc)))
