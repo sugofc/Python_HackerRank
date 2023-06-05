@@ -4,20 +4,37 @@ lista = [] # Guarda el Nombre y Score
 scr = [] # Solo guarda el indice de Score
 seg = [] # Guarda el Segundo valor mas alto
 
-for i in range(3): #(int(input("Cantidad: "))):
-    name = ["A","B","C"] #input("Nombre: ")
-    score = [20, 30, 40] #float(input("Score: "))
-    #lista.append([])
-    #lista[i] = [name, score]
-    src = min(score) #scr.append(lista[i][1])
+lista2 = []
+scr2 = []
+score2 = []
 
-for e in range(len(lista)-1):
-    if (lista[e][1] != min(scr)):
-        seg.append(lista[e][1])
+lista3 = []
+n = 0
+e = 0
 
-for j in range(len(seg)):
-    if (lista[j][1] == min(seg)):
-        print(lista[j])
+for i in range(5):
+    name = ["Harry","Berry","Tina","Akriti","Harsh"]
+    score = [37.21, 37.21, 37.2, 41, 39]
+    lista = [["Harry",37.21],["Berry",37.21],["Tina",37.2],["Aktiri",41],["Harsh",39]]
+    scr = score
 
-if len(lista) == 1:
-    print(lista[0])
+# for i in range(int(input("Cantidad: "))):
+#     name = input("Nombre: ")
+#     score = float(input("Score: "))
+#     lista.append([])
+#     lista[i] = [name,score]
+#     scr.append(lista[i][1])
+
+for e in lista:
+    if e[1] != min(scr):
+        lista2.append([])
+        lista2[n] = e
+        score2.append(e[1])
+        n += 1
+
+for k in lista2:
+    if k[1] == min(score2):
+        lista3.append([k[0]])
+        lista3.sort()
+
+print(lista3)
